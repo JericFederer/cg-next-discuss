@@ -21,9 +21,11 @@ export default async function Home() {
         </Button>
       </form>
 
-      {
-        session?.user ? <div>Signed In</div> : <div>Signed Out</div>
-      }
+      {session?.user ? (
+        <div>{JSON.stringify(session.user)}</div>
+      ) : (
+        <div>Signed Out</div>
+      )}
 
       <Profile />
     </div>
