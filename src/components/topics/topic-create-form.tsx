@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useFormState } from 'react-dom';
+import { useFormState } from "react-dom";
 import {
   Input,
   Button,
@@ -8,9 +8,10 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-} from '@nextui-org/react';
+} from "@nextui-org/react";
 
-import * as actions from '@/actions';
+import * as actions from "@/actions";
+import FormButton from "@/components/common/form-button";
 
 export default function TopicCreateForm() {
   // * The second argument of "useFormState" must be of the same TS type inside the first argument's "formState"
@@ -48,7 +49,9 @@ export default function TopicCreateForm() {
                 </div>
               ) : null
             }
-            <Button type="submit">Submit</Button>
+            <FormButton>
+              Save
+            </FormButton>
           </div>
         </form>
       </PopoverContent>
